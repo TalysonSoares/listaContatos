@@ -10,6 +10,11 @@ function inserir() {
         cidade: input_cidade.value
     };
 
+    if(dados.nome === "" || dados.numero === "" || dados.cidade === "")  {
+        alert('Dados invalidos');
+        return;
+    }
+
     fetch(API_URL+'/contatos', {
         method: 'POST',
         body: JSON.stringify(dados),
