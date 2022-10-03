@@ -1,5 +1,17 @@
 const API_URL = 'http://localhost:8000';
 
+function buscarParaEditar(id) {
+    input_editar_id.value = id;
+
+    fetch(API_URL+'/contatos/'+id)
+        .then(res => res.json())
+        .then(dados => {
+            input_editar_nome.value = dados.nome;
+            input_editar_cidade.value = dados.cidade;
+            input_editar_numero.value = dados.numero;
+        });
+}
+
 function editar() {
     event.preventDefault(); //impedindo a página de recarregar
     //recuperando os dados do formulario
