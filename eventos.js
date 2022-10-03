@@ -28,6 +28,19 @@ function inserir() {
     form_add.reset();    
 }
 
+async function excluir (id) {
+    let resposta = confirm('Are you sure?');
+
+    if(resposta !== true) {
+        return;
+    }
+    
+   await fetch(API_URL+'/contatos/'+id, {
+        method: 'DELETE'
+    })
+     atualizarLista()
+}
+
 function atualizarLista() {
     tabela_contatos.innerHTML = '';
 
