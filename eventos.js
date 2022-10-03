@@ -1,5 +1,29 @@
 const API_URL = 'http://localhost:8000';
 
+function editar() {
+    event.preventDefault(); //impedindo a página de recarregar
+    //recuperando os dados do formulario
+    let dados = {
+         nome: input_editar_nome.value,
+         cidade: input_editar_cidade.value,
+         numero: input_editar_numero.value,
+    };
+ 
+    fetch(API_URL+'/contatos/'+input_editar_id.value, {
+     method: 'PATCH',
+     body: JSON.stringify(dados),
+     headers: {
+         'Content-Type': 'application/json'
+     }
+ })
+         .then(res => res.json())
+         .then(() => atualizarLista());
+ 
+    let x = document.querySelector('[data-bs-dismiss="offcanvas"]');
+ 
+    x.dispatchEvent(new Event('click'));
+}
+
 function inserir() {
     //para a pagina não ser recarregada
     event.preventDefault();
