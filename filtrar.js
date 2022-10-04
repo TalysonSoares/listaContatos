@@ -13,9 +13,7 @@ function filtrar() {
         let coluna1 = linhas[posicao].children[0].innerText.toLowerCase();
         let coluna2 = linhas[posicao].children[1].innerText.toLowerCase();
 
-        let colunas = coluna1 + coluna2; 
-
-       // let linha = linhas[posicao].innerText.toLowerCase();
+        let colunas = coluna1 + coluna2
 
         if( colunas.includes(expressao) ) {
             linhas[posicao].style.display = '';
