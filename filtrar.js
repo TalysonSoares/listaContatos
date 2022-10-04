@@ -12,8 +12,8 @@ function filtrar() {
         
         let coluna1 = linhas[posicao].children[0].innerText.toLowerCase();
         let coluna2 = linhas[posicao].children[1].innerText.toLowerCase();
-
-        let colunas = coluna1 + coluna2
+        let coluna3 = linhas[posicao].children[2].innerText.toLowerCase();
+        let colunas = coluna1 + coluna2 + coluna3
 
         if( colunas.includes(expressao) ) {
             linhas[posicao].style.display = '';
