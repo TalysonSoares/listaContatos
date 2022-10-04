@@ -23,6 +23,30 @@
       "numero": "(85)988970641",
       "cidade": "Babilônia ",
       "id": 4
+    },
+    {
+      "nome": "Chowder",
+      "numero": "(85)991530528",
+      "cidade": "Cogulândia",
+      "id": 5
+    },
+    {
+      "nome": "Dre",
+      "numero": "(85)986381996",
+      "cidade": "San Andreas",
+      "id": 6
+    },
+    {
+      "nome": "Ciro Gomes",
+      "numero": "(85)986488191",
+      "cidade": "Pindamonhangaba",
+      "id": 7
+    },
+    {
+      "nome": "Ale Magna",
+      "numero": "(85)999958554",
+      "cidade": "Themyscira",
+      "id": 8
     }
   ]
 }
