@@ -42,7 +42,7 @@ function inserir() {
 
     let dados = {
         nome: input_nome.value,
-        numero: parseInt(input_numero.value),
+        numero: input_numero.value,
         cidade: input_cidade.value
     };
 

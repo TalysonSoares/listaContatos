@@ -10,11 +10,14 @@ function filtrar() {
             continue;
         }
         
-        let coluna1 = linhas[posicao].children[1].innerText.toLowerCase();
+        let coluna1 = linhas[posicao].children[0].innerText.toLowerCase();
+        let coluna2 = linhas[posicao].children[1].innerText.toLowerCase();
+
+        let colunas = coluna1 + coluna2; 
 
        // let linha = linhas[posicao].innerText.toLowerCase();
 
-        if( coluna1.includes(expressao) ) {
+        if( colunas.includes(expressao) ) {
             linhas[posicao].style.display = '';
         } else {
             linhas[posicao].style.display = 'none';
